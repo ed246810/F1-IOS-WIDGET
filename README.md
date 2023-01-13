@@ -1,5 +1,5 @@
 # F1-IOS-WIDGET
-<img src="https://github.com/ed246810/F1-IOS-WIDGET/blob/main/Images/1%20Round%201%20Countdown.jpeg" width="500" height="205">
+<img src="https://github.com/ed246810/F1-IOS-WIDGET/blob/main/Images/1%20Round%201%20Countdown.jpeg" width="550" height="260">
 
 ## About
 A iOS Widget that show **upgoming F1 time** of Race/Quali/Sprint time with **weather information**
@@ -28,21 +28,21 @@ Select "RUN SCRIPT" on "When Interacting"
 
 ## Display
 #### Big Countdown
-<img src="https://github.com/ed246810/F1-IOS-WIDGET/blob/main/Images/1%20Round%201%20Countdown.jpeg" width="500" height="205">
+<img src="https://github.com/ed246810/F1-IOS-WIDGET/blob/main/Images/1%20Round%201%20Countdown.jpeg" width="550" height="260">
 When Qualifying occurs more than 7 days later
 
 #### Weather Information (Weekend)
-<img src="https://github.com/ed246810/F1-IOS-WIDGET/blob/main/Images/2%20QUALI%20-%20RACE%20-%20WDC%20WEATHER.jpeg" width="500" height="205">
+<img src="https://github.com/ed246810/F1-IOS-WIDGET/blob/main/Images/2%20QUALI%20-%20RACE%20-%20WDC%20WEATHER.jpeg" width="550" height="260">
 Shows Quali/Race or Sprint/Quali Weather Information
 
 Shown during Race weekend
 
 #### Weekend Information - Countdown / Track layout
-<img src="https://github.com/ed246810/F1-IOS-WIDGET/blob/main/Images/2%20QUALI%20-%20RACE%20-%20WDC%20WEATHER.jpeg" width="500" height="205">
+<img src="https://github.com/ed246810/F1-IOS-WIDGET/blob/main/Images/2%20QUALI%20-%20RACE%20-%20WDC%20WEATHER.jpeg" width="550" height="260">
 This shows a Countdown and track layout, this is shown when weather information can't be access
 
 #### Race
-<img src="https://github.com/ed246810/F1-IOS-WIDGET/blob/main/Images/4%20RACE%20-%20WDC.jpeg" width="500" height="205">
+<img src="https://github.com/ed246810/F1-IOS-WIDGET/blob/main/Images/4%20RACE%20-%20WDC.jpeg" width="550" height="260">
 This shows the race weather, time and track layout
 
 This is shown on the day of the race
