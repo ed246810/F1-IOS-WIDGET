@@ -1,9 +1,10 @@
 # F1-IOS-WIDGET
 
-THIS CODE DOES NOT FULLY WORKS IT IS UNDER DEVELOPMENT
-
 ## About
-A ios Widget that show upgoming F1 Race/Quali/Sprint time with weather information
+A ios Widget that show **upgoming F1 time** of Race/Quali/Sprint time with **weather information**
+
+The code will be run on an iOS app known as scriptable
+
 Please note this is a personal project the code might crash and not work properly
 
 ## INSTALLATION
@@ -21,6 +22,27 @@ Please note this is a personal project the code might crash and not work properl
 
 Select "RUN SCRIPT" on "When Interacting"
 > When you click the widget the script will run, updating the information
+
+## Display
+#### Big Countdown
+<img src="https://github.com/ed246810/F1-IOS-WIDGET/blob/main/Images/1%20Round%201%20Countdown.jpeg" width="500" height="205">
+When Qualifying occurs more than 7 days later
+
+#### Weather Information (Weekend)
+<img src="https://github.com/ed246810/F1-IOS-WIDGET/blob/main/Images/2%20QUALI%20-%20RACE%20-%20WDC%20WEATHER.jpeg" width="500" height="205">
+Shows Quali/Race or Sprint/Quali Weather Information
+
+Shown during Race weekend
+
+#### Weekend Information - Countdown / Track layout
+<img src="https://github.com/ed246810/F1-IOS-WIDGET/blob/main/Images/2%20QUALI%20-%20RACE%20-%20WDC%20WEATHER.jpeg" width="500" height="205">
+This shows a Countdown and track layout, this is shown when weather information can't be access
+
+#### Race
+<img src="https://github.com/ed246810/F1-IOS-WIDGET/blob/main/Images/4%20RACE%20-%20WDC.jpeg" width="500" height="205">
+This shows the race weather, time and track layout
+
+This is shown on the day of the race
 
 #### ADDITIONAL INFO
 Created by Edwin - ED246810
