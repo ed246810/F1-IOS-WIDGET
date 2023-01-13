@@ -1,5 +1,7 @@
 # F1-IOS-WIDGET
 
+THIS CODE DOES NOT FULLY WORKS IT IS UNDER DEVELOPMENT
+
 ## About
 A ios Widget that show upgoming F1 Race/Quali/Sprint time with weather information
 Please note this is a personal project the code might crash and not work properly
