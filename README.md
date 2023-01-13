@@ -1,11 +1,14 @@
 # F1-IOS-WIDGET
+<img src="https://github.com/ed246810/F1-IOS-WIDGET/blob/main/Images/1%20Round%201%20Countdown.jpeg" width="500" height="205">
 
 ## About
-A ios Widget that show **upgoming F1 time** of Race/Quali/Sprint time with **weather information**
+A iOS Widget that show **upgoming F1 time** of Race/Quali/Sprint time with **weather information**
 
 The code will be run on an iOS app known as scriptable
 
 Please note this is a personal project the code might crash and not work properly
+
+This will only work for iPhone and iPad ONLY
 
 ## INSTALLATION
 1. Install Scriptable on iOS App Store on iPhone/iPad
