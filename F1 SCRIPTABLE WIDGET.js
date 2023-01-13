@@ -2,6 +2,16 @@
 // These must be at the very top of the file. Do not edit.
 // icon-color: deep-brown; icon-glyph: magic;
 
+//CODED AND CREATED BY ED246810 - EDWIN
+// HELP - https://github.com/ed246810/F1-IOS-WIDGET/blob/main/README.md
+// LEARN MORE - https://github.com/ed246810/F1-IOS-WIDGET
+// ABOUT THE CODER - https://github.com/ed246810
+
+//DO NOT EDIT THE CODE
+//EDITING THIS CODE, WILL CASE IT TO NOT WORK
+
+//IF YOUR CODE FAIL TO WORK, TRY RE INSTALLING THE CODE FROM STEP 2
+
 // --- LOCAL FILE ---
 file = FileManager.local()
 dir = file.documentsDirectory()
