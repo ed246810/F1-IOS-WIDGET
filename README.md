@@ -1,5 +1,5 @@
 # F1-IOS-WIDGET
-<img src="https://github.com/ed246810/F1-IOS-WIDGET/blob/main/Images/1%20Round%201%20Countdown.jpeg" width="550" height="260">
+<img src="https://github.com/ed246810/F1-IOS-WIDGET/blob/main/Images/Version%202/Race-Quali%20Countdown-Track%20Img.jpg" width="550" height="260">
 
 ## About
 A iOS Widget that show **upgoming F1 time** of Race/Quali/Sprint time with **weather information**
@@ -9,6 +9,12 @@ The code will be run on an iOS app known as scriptable
 Please note this is a personal project the code might crash and not work properly
 
 This will only work for iPhone and iPad ONLY
+
+## VERSION 2
+New Features in latest version includes
+- Auto Update Code
+- Bug Fixes for URLs
+- Offline Mode (experimental)
 
 ## INSTALLATION
 1. Install Scriptable on iOS App Store on iPhone/iPad
@@ -26,26 +32,21 @@ This will only work for iPhone and iPad ONLY
 Select "RUN SCRIPT" on "When Interacting"
 > When you click the widget the script will run, updating the information
 
-## Display
-#### Big Countdown
-<img src="https://github.com/ed246810/F1-IOS-WIDGET/blob/main/Images/1%20Round%201%20Countdown.jpeg" width="550" height="260">
-When Qualifying occurs more than 7 days later
-
-#### Weather Information (Weekend)
-<img src="https://github.com/ed246810/F1-IOS-WIDGET/blob/main/Images/2%20QUALI%20-%20RACE%20-%20WDC%20WEATHER.jpeg" width="550" height="260">
-Shows Quali/Race or Sprint/Quali Weather Information
-
-Shown during Race weekend
-
+## Display (V2)
 #### Weekend Information - Countdown / Track layout
-<img src="https://github.com/ed246810/F1-IOS-WIDGET/blob/main/Images/2%20QUALI%20-%20RACE%20-%20WDC%20WEATHER.jpeg" width="550" height="260">
+<img src="https://github.com/ed246810/F1-IOS-WIDGET/blob/main/Images/Version%202/Race-Quali%20Countdown-Track%20Img.jpg" width="550" height="260">
 This shows a Countdown and track layout, this is shown when weather information can't be access
 
+
+#### Weather Information (Weekend)
+<img src="https://github.com/ed246810/F1-IOS-WIDGET/blob/main/Images/Version%202/Race-Quali%20Weather.jpg" width="550" height="260">
+Shows Quali/Sprint/Race Weather Information
+
+
 #### Race
-<img src="https://github.com/ed246810/F1-IOS-WIDGET/blob/main/Images/4%20RACE%20-%20WDC.jpeg" width="550" height="260">
+<img src="https://github.com/ed246810/F1-IOS-WIDGET/blob/main/Images/Version%202/Race%20Weather.jpg" width="550" height="260">
 This shows the race weather, time and track layout
 
-This is shown on the day of the race
 
 #### ADDITIONAL INFO
 Created by Edwin - ED246810
