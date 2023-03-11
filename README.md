@@ -1,5 +1,9 @@
 # F1-IOS-WIDGET
 <img src="https://github.com/ed246810/F1-IOS-WIDGET/blob/main/Images/Version%202/Race-Quali%20Countdown-Track%20Img.jpg" width="550" height="260">
+Learn more now with my Youtube video - https://youtu.be/aBVP9NzzzKU
+
+Subcribe to follow for more updates and deep dives
+
 
 ## About
 A iOS Widget that show **upgoming F1 time** of Race/Quali/Sprint time with **weather information**
@@ -15,6 +19,8 @@ New Features in latest version includes
 - Auto Update Code
 - Bug Fixes for URLs
 - Offline Mode (experimental)
+
+Version 3 is coming soon, follow my [Youtube Channel](https://youtube.com/@edwincode) for updates
 
 ## INSTALLATION
 1. Install Scriptable on iOS App Store on iPhone/iPad
