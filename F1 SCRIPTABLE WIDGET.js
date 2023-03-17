@@ -1,7 +1,11 @@
-// Variables used by Scriptable.
-// These must be at the very top of the file. Do not edit.
-// icon-color: light-brown; icon-glyph: magic;
-// VERSION 2
+// VERSION 2.0.1
+// 
+// NEW UPDATE (2.0.1)
+// -BUG FIXES
+// 
+// NOTE - OFFLINE MODE IS STILL IN DEVELOPMENT
+// GET MORE INFO ON - https://github.com/ed246810/F1-IOS-WIDGET
+// LEARN MORE ON - https://youtu.be/aBVP9NzzzKU
 
 
 //MAIN CODE AT LINE ___
@@ -330,15 +334,17 @@ async function SaveGetData(vtype,vpath,vdata)
 }
 
 async function getraceinfo()//COUNTRY,LAT,LON,ROUND,RACETZ
-{
+{	
 	log("* FUNCTION - getraceinfo")
 	RaceRound=DataraceF1.Next.MRData.RaceTable.Races[0].round
 	RaceName=DataraceF1.Next.MRData.RaceTable.Races[0].raceName
 	RaceCountry= DataraceF1.Next.MRData.RaceTable.Races[0].Circuit.Location.country
 	RaceLat=DataraceF1.Next.MRData.RaceTable.Races[0].Circuit.Location.lat
 	RaceLon=DataraceF1.Next.MRData.RaceTable.Races[0].Circuit.Location.long
-	RaceTZ= await gettimezone(RaceLat,RaceLon)
 	RaceTrack= DataraceF1.Next.MRData.RaceTable.Races[0].Circuit.Location.locality
+
+	//ONLINE PART
+	RaceTZ= await gettimezone(RaceLat,RaceLon)
 
 var logmsg = "RaceRound - "+RaceRound+" | RaceName - " +RaceName	+" | RaceCountry - "+RaceCountry+" | RaceLat - "+RaceLat+" | RaceLon - "+RaceLon+" | RaceTZ - "+RaceTZ+" | RaceTrack - "+RaceTrack
 
@@ -513,13 +519,27 @@ async function SaveGetDataJPG(vpath,vdata)
 
 async function getcountryflag(country)
 {
-	var countrylink = country.replace(" ","%20")
-	var link = APIflag.Base+countrylink+APIflag.End
-	var res = await getData(link)
-	log(res)
-	res = res[0].flag
-	varLog(res)
-	return res
+	log("* FUNCTION - getcountryflag")
+	
+	if(!isOnline)
+	{
+		return undefined
+	}
+	
+	try{
+		
+		var countrylink = country.replace(" ","%20")
+		//API 1
+		var link = APIflag.Base+countrylink+APIflag.End
+		var res = await getData(link)
+		res = res[0].flag
+		varLog(res)
+		return res
+		}
+	catch
+	{
+		return undefined
+	}
 }
 
 
@@ -571,12 +591,15 @@ function checksessionfinish()
 async function getweatherdata()
 {
 	log("* FUNCTION - getweatherinfo")
-	if(isOnline)
+	if(!isOnline)
 	{
+		Dataweather = undefined
+		return
+	}
+	
 	var link = APIweather.Base+RaceLat+APIweather.Lon+RaceLon+APIweather.Tz+userTZ+APIweather.End
 	Dataweather = await getData(link)
 	debugLog(Dataweather)
-	}
 }
 
 
@@ -646,15 +669,25 @@ async function getweatherinfo(weatherid,type)//CODE,TEMP,MM,ICON
 	{
 		Weather[type].Show = Weather[type].mm+" mm"
 	}
-
-	
-	//ICON
-	var res = await new Request("http://openweathermap.org/img/wn/"+Weather[type].Code+"@2x.png").loadImage()
-	Weather[type].Icon = res
 	
 	logmsg="Weather."+type+" |.Show - "+Weather[type].Show+" |.Info - "+Weather[type].Info+" |.Code - "+Weather[type].Code
 	varLog(logmsg)
 	
+	
+		//ICON
+	var res = await new Request("http://openweathermap.org/img/wn/"+Weather[type].Code+"@2x.png").loadImage()
+	Weather[type].Icon = res
+	
+}
+
+function getweathericon()
+{
+	x={0:Race,1:Quali,2:Sprint}
+	isWeather=[],isFinish=[]
+	var isWeather={Race:isRaceWeather,Quali:isQualiWeather,Sprint:isSprintWeather}
+	var isFinish = {Race:isRaceFinish,Quali:isQualiFinish,Sprint:isSprintFinish}
+	
+	//OFFLINE MODE STILL IN WORKING
 }
 
 function getwdc()
@@ -677,7 +710,7 @@ function getwdc()
 //{
 //log("^^ RUN - "+runtime)
 await checkonline()
-await checkupdate(2.0)
+await checkupdate(2.0.1)
 
 getUSERtimezone()
 setupFileManager()
@@ -702,6 +735,7 @@ await gettrackimg()//trackimgss[]
 trackimg = await SaveGetDataJPG(path.trackimg,trackimg)
 countryflag = await getcountryflag(RaceCountry)
 countryflag=await SaveGetData("",path.flag,countryflag)
+log("PPP")
 await getsessioncountdown()
 checksessionfinish()
 
@@ -710,24 +744,32 @@ checksessionfinish()
 //WEATHER INFO
 await getweatherdata()
 Dataweather = await SaveGetData("json",path.weather,Dataweather)
+isRaceWeather=true,isQualiWeather=true,isSprintWeather=true
 	//RACE
 if(Countdown.Days.Race<6&&Countdown.Days.Race>-1)//< PLUS IS RACE
 {
 	Weather.Race.Id = await getweatherid(DateTime.Race,"Race")
 	await getweatherinfo(Weather.Race.Id,"Race")
+	isRaceWeather=true
 }
 	//QUALI
 if(!isQualifinish&&Countdown.Days.Quali<6) 
 {
 	Weather.Quali.Id = await getweatherid(DateTime.Quali,"Quali")
 	await getweatherinfo(Weather.Quali.Id,"Quali")
+	isQualiWeather=true
 }
 	//SPRINT
 if(isSprint&&!isSprintfinish&&Countdown.Days.Sprint<6)
 {
 	Weather.Sprint.Id = await getweatherid(DateTime.Sprint,"Sprint")
 	await getweatherinfo(Weather.Sprint.Id,"Sprint")
+	isSprintWeather=true
 }
+
+getweathericon()
+
+
 
 //WDC
 getwdc()
