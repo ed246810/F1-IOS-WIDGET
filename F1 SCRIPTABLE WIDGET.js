@@ -1,12 +1,20 @@
-// VERSION 2.0.3
-// 
-// NEW UPDATE (2.0.3)
-// -BUG FIXES
-// 
-// NOTE - OFFLINE MODE IS STILL IN DEVELOPMENT
-// GET MORE INFO ON - https://github.com/ed246810/F1-IOS-WIDGET
-// LEARN MORE ON - https://youtu.be/aBVP9NzzzKU
+// Variables used by Scriptable.
+// These must be at the very top of the file. Do not edit.
+// icon-color: green; icon-glyph: magic;
+/* 
+F1 2023 / VERSION 2.0.4
 
+==== NEW UPDATE (2.0.4)
+	-Fixed Bugs (Line 699 - Got previous race position instead of WDC stanings)
+
+==== NOTE
+	-OFFLINE MODE IS STILL IN DEVELOPMENT
+
+==== LEARN MORE
+GET MORE INFO ON - https://github.com/ed246810/F1-IOS-WIDGET
+LEARN MORE ON - https://youtu.be/aBVP9NzzzKU
+
+*/
 
 //MAIN CODE AT LINE ___
 //--- 🔖ALL VARRIABLES🔖 ---
@@ -694,7 +702,7 @@ function getwdc()
 {
 	for(p=1,i=0;i<20;p++,i++)
 	{
-	wdc[p]=DataraceF1.PrevRace.MRData.RaceTable.Races[0].Results[i].Driver.familyName
+	wdc[p]=DataraceF1.WDC.MRData.StandingsTable.StandingsLists[0].DriverStandings[i].Driver.familyName
 	}
 	
 	logmsg="WDC - "+wdc
@@ -710,7 +718,7 @@ function getwdc()
 //{
 //log("^^ RUN - "+runtime)
 await checkonline()
-await checkupdate("2.0.3")
+await checkupdate("2.0.4")
 
 getUSERtimezone()
 setupFileManager()
