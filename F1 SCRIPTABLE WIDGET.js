@@ -725,7 +725,7 @@ function getwdc()
 //{
 //log("^^ RUN - "+runtime)
 await checkonline()
-await checkupdate("2.0.5")
+await checkupdate("2.0.5.1")
 
 getUSERtimezone()
 setupFileManager()
