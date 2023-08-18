@@ -2,9 +2,9 @@
 // These must be at the very top of the file. Do not edit.
 // icon-color: green; icon-glyph: magic;
 /* 
-F1 2023 / VERSION 2.0.5
+F1 2023 / VERSION 2.0.5.1
 
-==== NEW UPDATE (2.0.5)
+==== NEW UPDATE (2.0.5.1)
 	-Fixed Bugs (Line 699 - Got previous race position instead of WDC stanings)
 
 ==== NOTE
@@ -541,7 +541,7 @@ async function getcountryflag(country)
 		var link = APIflag.Base+countrylink+APIflag.End
 		var res = await getData(link)
 
-		for(i=0;I<5;i++){
+		for(i=0;i<5;i++){
 			if(res[i].name.common != RaceCountry) continue
 			res = res[i].flag
 		}
