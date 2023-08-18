@@ -540,8 +540,15 @@ async function getcountryflag(country)
 		//API 1
 		var link = APIflag.Base+countrylink+APIflag.End
 		var res = await getData(link)
-		res = res[0].flag
+
+		for(i=0;I<5;i++){
+			if(res[i].name.common != RaceCountry) continue
+			res = res[i].flag
+		}
+
+		if(res==undefined) res = res[0].flag
 		varLog(res)
+		
 		return res
 		}
 	catch
@@ -646,9 +653,9 @@ async function getweatherinfo(weatherid,type)//CODE,TEMP,MM,ICON
 {
 	log("* FUNCTION - getweatherinfo - "+type)
 	
-	Weather[type].Code = Dataweather.hourly.precipitation[weatherid]
+	Weather[type].mm = Dataweather.hourly.precipitation[weatherid]
 	Weather[type].Temp = Dataweather.hourly.temperature_2m[weatherid]
-	Weather[type].mm = Dataweather.hourly.weathercode[weatherid]
+	Weather[type].Code = Dataweather.hourly.weathercode[weatherid]
 
 	var logmsg = "Weather."+type+" |.Temp - "+Weather[type].Temp+" |.mm - "+Weather[type].mm
 	varLog(logmsg)
