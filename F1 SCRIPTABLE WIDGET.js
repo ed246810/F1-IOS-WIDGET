@@ -2,9 +2,9 @@
 // These must be at the very top of the file. Do not edit.
 // icon-color: green; icon-glyph: magic;
 /* 
-F1 2023 / VERSION 2.0.4
+F1 2023 / VERSION 2.0.5
 
-==== NEW UPDATE (2.0.4)
+==== NEW UPDATE (2.0.5)
 	-Fixed Bugs (Line 699 - Got previous race position instead of WDC stanings)
 
 ==== NOTE
@@ -725,7 +725,7 @@ function getwdc()
 //{
 //log("^^ RUN - "+runtime)
 await checkonline()
-await checkupdate("2.0.4")
+await checkupdate("2.0.5")
 
 getUSERtimezone()
 setupFileManager()
