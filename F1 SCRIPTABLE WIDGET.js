@@ -2,10 +2,10 @@
 // These must be at the very top of the file. Do not edit.
 // icon-color: green; icon-glyph: magic;
 /* 
-F1 2023 / VERSION 2.0.5.1
+F1 2026 / VERSION 2.1
 
-==== NEW UPDATE (2.0.5.1)
-	-Fixed Bugs (Line 699 - Got previous race position instead of WDC stanings)
+==== NEW UPDATE (2.1)
+	- Updated API Website
 
 ==== NOTE
 	-OFFLINE MODE IS STILL IN DEVELOPMENT
@@ -47,7 +47,7 @@ let Dic_weather = {0:["Clear","Clear Sky","01d","01n"],1:["Clear","Mainly Clear"
 dF= new DateFormatter()
 
 APIofficalF1="https://livetiming.formula1.com/static/"
-APIraceF1="https://ergast.com/api/f1/current/"
+APIraceF1="https://api.jolpi.ca/ergast/f1/current/"
 
 APItimezone={"Base":"https://www.timeapi.io/api/TimeZone/coordinate?Latitiude=","lon":"&longitude="}
 APIweather={"Base":"https://api.open-meteo.com/v1/forecast?latitude=","Lon":"&longitude=","Tz":"&hourly=temperature_2m,precipitation,weathercode&timezone=","End":"&past_days=1"}
